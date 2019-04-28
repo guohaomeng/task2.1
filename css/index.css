@@ -1,0 +1,381 @@
+body {
+	background-color: #f3f5f7;
+
+}
+#container{
+	width: 1520px;
+	overflow: hidden;
+}
+header {
+	width: 1300px;
+	height: 100px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+.logo {
+	width: 195px;
+	height: 42px;
+	float: left;
+}
+.logo a {
+  display: block;
+  width: 195px;
+  height: 42px;
+  background: url(../images/logo.jpg) no-repeat;
+  text-indent: -990px;
+  overflow: hidden; 
+}
+nav {
+	float: left;
+	margin-left: 20px;
+}
+nav li {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 25px;
+}
+nav li a {
+	display: block;
+	height: 40px;
+	font-size: 18px;
+	padding: 0 10px;
+}
+nav li a:hover {
+	border-bottom: 2px solid #00a4ff;
+}
+.search {
+	width: 410px;
+	height: 40px;
+	background-color: purple;
+	float: left;
+	margin-left: 160px;
+}
+.search input {
+	width: 361px;
+	height: 40px;
+	border: 1px solid #00a4ff;
+	outline: none;  /* 轮廓线 */
+	padding-left: 10px;
+	float: left;
+}
+.search button {
+	width: 49px;
+	height: 40px;
+	border: 0;
+	outline: none;
+	float: left;
+	background: url(../images/fa-search.png) no-repeat;
+}
+.personal {
+	float: right;
+	height: 40px;
+	line-height: 40px;
+}
+.personal dt, .personal dd {
+	float: left;
+}
+.personal s {
+	position: relative;
+	/* padding: 20px; */
+	padding: 0 20px;
+	text-decoration: none;
+}
+.personal s::before {
+	content: "";
+	display: block;  /* 因为伪元素默认的是行内元素 */
+	width: 6px;
+	height: 6px;
+	background-color: red;
+	border-radius: 50%;
+	position: absolute;
+	right: 15px;
+	top: 0;
+}
+.personal span img {
+	border-radius: 50%;
+	margin-right: 10px;
+	transition: all 0.6s;
+}
+.personal span img:hover {
+	transform: rotate(-360deg);
+}
+/*banner css*/
+.banner{
+    height: 420px;
+	width: 1520px;
+	position: absolute;
+    display: flex;
+    flex-flow: row ,nowrap;
+    justify-content: center;
+    background-color: #1c036c;
+
+}
+.bannercenter{
+    height: 420px;
+    width:1200px;
+    display: flex;
+	overflow: hidden;
+	z-index: 1;
+    
+}
+.bannerleft{
+	display: block;
+    height: 420px;
+    width: 130px;
+	z-index: 2;
+	position:  absolute;
+	float: left;
+	background: rgba(0, 0, 0, .3);
+	
+}
+.bannerleft li {
+	padding-left:20px;
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+}
+.bannerleft a {
+	font-size: 14px;
+	color: #fff;
+	display: block;
+
+}
+.bannerleft a:hover {
+	color: #00b4ff;
+}
+
+
+.bannerleft span {
+	position: absolute;
+	right: 20px;
+	top: 0;
+}
+.bannerright{
+	display: block;
+    height: 300px;
+    width: 228px;
+	z-index: 2;
+	position:  absolute;
+	float: right;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #fff;
+	margin-left: 970px;
+	
+}
+.bannerright dt {
+	height: 50px;
+	background-color: #9bceea;
+	font-weight: 700;
+	color: #fff;
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+}
+.bannerright dd {
+	padding: 15px 20px 0;
+}
+.bannerright dd li {
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+	padding-top: 6px;
+}
+.bannerright dd li:last-child {
+	border: 0;
+}
+.bannerright  h5 {
+	font-size: 16px;
+	font-weight: normal;
+}
+/*轮播图css*/
+.scrollimage{z-index: auto;display: block; height: 420px;width:1200px;overflow: hidden;position: relative;}
+.pic2{
+	width:4800px;/*4张图的宽度*/
+	position: absolute;/*基于父容器进行定位*/
+	left:0;
+	animation-name: focusmap;
+	animation-duration: 12s;
+	animation-iteration-count: infinite; /*动画调用可以简写*/
+
+}
+ @keyframes focusmap {
+	0%,30%{
+		left: 0;
+	}
+	35%,65%{
+		left: -1200px;
+	}
+	70%,99%{
+		left: -2400px;
+	}
+	100%{
+		left: -3600px;
+	}
+   
+}
+.pic2 li{
+	float: left;
+	
+}
+
+.pic2 li img {
+	width: 1200px;
+	height: 420px;
+}
+
+/*content部分*/
+.scontent{
+	
+	width: 1200px;
+	height: 670px;
+	margin-top: 420px;
+	display: block;
+	margin-left: 160px;
+}
+#content{
+	width: 1200px;
+	height: 670px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 160px;
+	margin-top: 420px;
+
+}
+.recommend{
+	width: 1200px;
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	font-size: 14px;
+	color: black;
+	line-height: 50px;
+	margin-top: 10px;
+	background-color: #fff;
+	box-shadow: 0px 1px 12px rgba(0, 0, 0, .4);
+}
+.rec-1{
+	display:flex;flex-direction:row;justify-content: space-between;
+}
+.rec1_1{margin-right:20px;width:45px;height:45px;border-radius: 23px;background-color: beige;text-align: center;transition: 0.3s;}
+.rec1_1:hover{background-color: #ff7c2d;cursor: pointer;}
+/*products部分*/
+.products_1{
+	display: flex;
+	width: 1200px;
+	height: 27px;
+	justify-content: space-between;
+	flex-flow: row,nowrap;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.products_2{
+	display: flex;
+	width: 1250px;
+	height: 770px;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+.examples{
+	display: flex;
+	width: 228;
+	height: 270px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	background-color: #fff;
+	transition: all 0.4s;
+}
+.pro-hd {
+	height: 40px;
+	
+}
+.pro-hd h4 {
+	font-weight: normal;
+	font-size: 18px;
+}
+.pro-hd a {
+	
+	top: 0;
+	right: 20px;
+}
+.examples:hover {
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
+	transform: translateY(-10px);
+}
+.examples:nth-child(5n) {
+	margin-right: 0;
+}
+.pic img {
+	transition: all 0.4s;
+	
+	
+}
+.pic img:hover {
+	margin-left: -5px;
+}
+.pro-title {
+	width: 185px;
+	margin: 20px auto;
+	font-size: 14px;
+	color: #050505;
+}
+.examples p {
+	width: 185px;
+	margin: 20px auto;
+	color: #999;
+}
+.examples p span {
+	color: #ff7c2d;
+}
+/*footer*/
+footer {
+	height: 250px;
+	background-color: #FFF;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+.footer-l {
+	margin-left: 20px;
+	float: left;
+}
+.footer-l p {
+	margin: 25px 0 15px 0;
+	line-height: 24px;
+}
+.footer-l a {
+	width: 120px;
+	height: 35px;
+	display: block;
+	border: 1px solid #22b0ff;
+	text-align: center;
+	line-height: 35px;
+	color: #22b0ff;
+}
+.footer-r {
+	
+}
+.footer-r dl {
+	float: left;
+	margin-left: 130px;
+}
+.footer-r dl dt {
+	font-size: 14px;
+	color: #333;
+	height: 30px;
+}
+.footer-r dd {
+	height: 20px;
+}
+.footerw{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 1200px;
+	height:390px;
+	margin-left: 160px;
+}
